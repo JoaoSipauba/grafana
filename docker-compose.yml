@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  grafana:
+    container_name: grafana
+    network_mode: bridge
+    image: grafana/grafana-enterprise
+    ports:
+      - 3000:3000
+    volumes:
+      - data:/grafana
+volumes:
+  data:
